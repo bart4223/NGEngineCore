@@ -13,6 +13,10 @@
 		29D4C60D2AF3AC34000DCE4F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		29D4C6122AF3D85B000DCE4F /* NGCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCommon.h; sourceTree = "<group>"; };
 		29D4C6132AF3D85B000DCE4F /* NGCommon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGCommon.cpp; sourceTree = "<group>"; };
+		29D4C6162AF400EC000DCE4F /* NGStrings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGStrings.cpp; sourceTree = "<group>"; };
+		29D4C6172AF400EC000DCE4F /* NGStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGStrings.h; sourceTree = "<group>"; };
+		29D4C6182AF403CD000DCE4F /* NGExceptionDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGExceptionDefinitions.h; sourceTree = "<group>"; };
+		29D4C6192AF403CD000DCE4F /* NGITestableComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGITestableComponent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -40,6 +44,10 @@
 			children = (
 				29D4C6122AF3D85B000DCE4F /* NGCommon.h */,
 				29D4C6132AF3D85B000DCE4F /* NGCommon.cpp */,
+				29D4C6182AF403CD000DCE4F /* NGExceptionDefinitions.h */,
+				29D4C6192AF403CD000DCE4F /* NGITestableComponent.h */,
+				29D4C6172AF400EC000DCE4F /* NGStrings.h */,
+				29D4C6162AF400EC000DCE4F /* NGStrings.cpp */,
 			);
 			name = common;
 			sourceTree = "<group>";
