@@ -17,12 +17,14 @@
 		29D4C6172AF400EC000DCE4F /* NGStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGStrings.h; sourceTree = "<group>"; };
 		29D4C6182AF403CD000DCE4F /* NGExceptionDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGExceptionDefinitions.h; sourceTree = "<group>"; };
 		29D4C6192AF403CD000DCE4F /* NGITestableComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGITestableComponent.h; sourceTree = "<group>"; };
+		29D4C61B2AF404F2000DCE4F /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		29D4C6032AF3A564000DCE4F = {
 			isa = PBXGroup;
 			children = (
+				29D4C61A2AF404DB000DCE4F /* docs */,
 				29D4C60C2AF3ABAE000DCE4F /* library.properties */,
 				29D4C60D2AF3AC34000DCE4F /* LICENSE */,
 				29D4C60A2AF3A698000DCE4F /* README.md */,
@@ -50,6 +52,14 @@
 				29D4C6162AF400EC000DCE4F /* NGStrings.cpp */,
 			);
 			name = common;
+			sourceTree = "<group>";
+		};
+		29D4C61A2AF404DB000DCE4F /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				29D4C61B2AF404F2000DCE4F /* ToDo.txt */,
+			);
+			path = docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
