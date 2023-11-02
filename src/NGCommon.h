@@ -1,6 +1,6 @@
 //
 //  NGCommon.h
-//  NGEngineControl
+//  NGEngineCore
 //
 //  Created by Nils Grimmer on 09.06.21.
 //
