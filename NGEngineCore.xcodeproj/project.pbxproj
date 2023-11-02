@@ -8,12 +8,18 @@
 
 /* Begin PBXFileReference section */
 		29D4C60A2AF3A698000DCE4F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		29D4C60B2AF3AB7A000DCE4F /* keywords.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
+		29D4C60C2AF3ABAE000DCE4F /* library.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
+		29D4C60D2AF3AC34000DCE4F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		29D4C6032AF3A564000DCE4F = {
 			isa = PBXGroup;
 			children = (
+				29D4C60D2AF3AC34000DCE4F /* LICENSE */,
+				29D4C60C2AF3ABAE000DCE4F /* library.properties */,
+				29D4C60B2AF3AB7A000DCE4F /* keywords.txt */,
 				29D4C60A2AF3A698000DCE4F /* README.md */,
 			);
 			sourceTree = "<group>";
