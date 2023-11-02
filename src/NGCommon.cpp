@@ -14,7 +14,15 @@ void _ensureGlobalSerial(int serialRate) {
     }
 }
 
+void setGlobalRandomSeedAnalogInput(byte input) {
+    _globalRandomSeedAnalogInput = input;
+}
+
 bool getYesOrNo() {
+    if (!_globalRandomSeedInitialized) {
+        randomSeed(analogRead(_globalRandomSeedAnalogInput));
+        _globalRandomSeedInitialized = true;
+    }
     return (random(0, 2) == 0);
 }
 

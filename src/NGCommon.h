@@ -29,7 +29,13 @@ enum functionType { ftMenu, ftLeft, ftRight, ftUp, ftDown, ftOK, ftPlay };
 
 static bool _globalSerialStarted = false;
 
+static bool _globalRandomSeedInitialized = false;
+
+static byte _globalRandomSeedAnalogInput = A0;
+
 void _ensureGlobalSerial(int serialRate);
+
+void setGlobalRandomSeedAnalogInput(byte input);
 
 bool getYesOrNo();
 
