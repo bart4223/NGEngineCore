@@ -11,6 +11,8 @@
 		29D4C60B2AF3AB7A000DCE4F /* keywords.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
 		29D4C60C2AF3ABAE000DCE4F /* library.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
 		29D4C60D2AF3AC34000DCE4F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		29D4C6122AF3D85B000DCE4F /* NGCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCommon.h; sourceTree = "<group>"; };
+		29D4C6132AF3D85B000DCE4F /* NGCommon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGCommon.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -36,6 +38,8 @@
 		29D4C60F2AF3AF16000DCE4F /* common */ = {
 			isa = PBXGroup;
 			children = (
+				29D4C6122AF3D85B000DCE4F /* NGCommon.h */,
+				29D4C6132AF3D85B000DCE4F /* NGCommon.cpp */,
 			);
 			name = common;
 			sourceTree = "<group>";
