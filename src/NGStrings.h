@@ -14,8 +14,8 @@
 #include <WProgram.h>
 #endif
 
-char* FloatToChar(float value);
+unsigned char* FloatToChar(float value);
 
-char* LeftPadInteger(int value, int digits);
+unsigned char* LeftPadInteger(int value, int digits);
 
 #endif /* NGStrings_h */

@@ -15,11 +15,16 @@
 #endif
 
 #ifdef ARDUINO_AVR_UNO
+#define NG_PLATFORM_AVR
 #define NG_PLATFORM_UNO
 #elif ARDUINO_AVR_MEGA2560
+#define NG_PLATFORM_AVR
 #define NG_PLATFORM_MEGA
 #elif ARDUINO_AVR_NANO
+#define NG_PLATFORM_AVR
 #define NG_PLATFORM_NANO
+#else
+#define NG_PLATFORM_ARM
 #endif
 
 #define DEFAULTSERIALRATE   9600
