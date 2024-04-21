@@ -6,6 +6,7 @@
 //
 
 #include <NGCommon.h>
+#include <NGDefaultFont.h>
 
 void _ensureGlobalSerial(int serialRate) {
     if (!_globalSerialStarted) {
@@ -34,3 +35,12 @@ bool IsSwitchOn(int pin) {
     pinMode(pin, INPUT_PULLUP);
     return digitalRead(pin) == LOW;
 }
+
+NGCustomFont* getGlobalFont()
+{
+    if (_globalFont == nullptr) {
+        _globalFont = new NGDefaultFont();
+    }
+    return _globalFont;
+}
+

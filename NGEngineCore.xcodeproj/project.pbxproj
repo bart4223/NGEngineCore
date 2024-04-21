@@ -20,6 +20,12 @@
 		29D4C61B2AF404F2000DCE4F /* ToDo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		29D4C61E2AF52D11000DCE4F /* NG8BitShiftRegister.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NG8BitShiftRegister.cpp; sourceTree = "<group>"; };
 		29D4C61F2AF52D11000DCE4F /* NG8BitShiftRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NG8BitShiftRegister.h; sourceTree = "<group>"; };
+		29F15E1E2BD51D4900F1E714 /* NGDefaultFont.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGDefaultFont.cpp; sourceTree = "<group>"; };
+		29F15E1F2BD51D4900F1E714 /* NGDefaultFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDefaultFont.h; sourceTree = "<group>"; };
+		29F15E202BD52EC000F1E714 /* NGZX81Font.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGZX81Font.cpp; sourceTree = "<group>"; };
+		29F15E212BD52EC000F1E714 /* NGZX81Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGZX81Font.h; sourceTree = "<group>"; };
+		29FF6A552BD2DB5100EFE28A /* NGCustomFont.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGCustomFont.cpp; sourceTree = "<group>"; };
+		29FF6A562BD2DB5100EFE28A /* NGCustomFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCustomFont.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -39,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				29D4C60F2AF3AF16000DCE4F /* common */,
+				29FF6A572BD3AA9700EFE28A /* Fonts */,
 				29D4C61D2AF52CCD000DCE4F /* misc */,
 			);
 			path = src;
@@ -72,6 +79,19 @@
 				29D4C61E2AF52D11000DCE4F /* NG8BitShiftRegister.cpp */,
 			);
 			name = misc;
+			sourceTree = "<group>";
+		};
+		29FF6A572BD3AA9700EFE28A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				29FF6A562BD2DB5100EFE28A /* NGCustomFont.h */,
+				29FF6A552BD2DB5100EFE28A /* NGCustomFont.cpp */,
+				29F15E1F2BD51D4900F1E714 /* NGDefaultFont.h */,
+				29F15E1E2BD51D4900F1E714 /* NGDefaultFont.cpp */,
+				29F15E212BD52EC000F1E714 /* NGZX81Font.h */,
+				29F15E202BD52EC000F1E714 /* NGZX81Font.cpp */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -14,6 +14,8 @@
 #include <WProgram.h>
 #endif
 
+#include "NGCustomFont.h"
+
 #ifdef ARDUINO_AVR_UNO
 #define NG_PLATFORM_AVR
 #define NG_PLATFORM_UNO
@@ -47,5 +49,9 @@ bool getYesOrNo();
 bool IsButtonPressed(int pin);
 
 bool IsSwitchOn(int pin);
+
+static NGCustomFont *_globalFont = nullptr;
+
+NGCustomFont* getGlobalFont();
 
 #endif /* NGCommon_h */
