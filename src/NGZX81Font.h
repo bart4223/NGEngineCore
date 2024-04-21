@@ -40,6 +40,14 @@ protected:
     byte _getNumeralEight(byte line);
     
     byte _getNumeralNine(byte line);
+    
+    byte _getLetterA(byte line);
+    
+    byte _getLetterX(byte line);
+    
+    byte _getLetterZ(byte line);
+
+    byte _getLetterUnknown(byte line);
 
 public:
     NGZX81Font();

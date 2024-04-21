@@ -233,6 +233,92 @@ byte NGZX81Font::_getNumeralNine(byte line) {
     return res;
 }
 
+byte NGZX81Font::_getLetterA(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+            res = 0x3C;
+            break;
+        case 0x02:
+        case 0x03:
+        case 0x05:
+        case 0x06:
+            res = 0x42;
+            break;
+        case 0x04:
+            res = 0x7E;
+            break;
+    }
+    return res;
+}
+
+byte NGZX81Font::_getLetterX(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x06:
+            res = 0x42;
+            break;
+        case 0x02:
+        case 0x05:
+            res = 0x24;
+            break;
+        case 0x03:
+        case 0x04:
+            res = 0x18;
+            break;
+    }
+    return res;
+}
+
+byte NGZX81Font::_getLetterZ(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x06:
+            res = 0x7E;
+            break;
+        case 0x02:
+            res = 0x04;
+            break;
+        case 0x03:
+            res = 0x08;
+            break;
+        case 0x04:
+            res = 0x10;
+            break;
+        case 0x05:
+            res = 0x20;
+            break;
+    }
+    return res;
+}
+
+byte NGZX81Font::_getLetterUnknown(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+            res = 0x00;
+            break;
+        case 0x02:
+            res = 0x00;
+            break;
+        case 0x03:
+            res = 0x00;
+            break;
+        case 0x04:
+            res = 0x00;
+            break;
+        case 0x05:
+            res = 0x00;
+            break;
+        case 0x06:
+            res = 0x00;
+            break;
+    }
+    return res;
+}
+
 byte NGZX81Font::getCharLineValue(char c, byte line) {
     byte res = 0x00;
     switch(c) {
@@ -265,6 +351,18 @@ byte NGZX81Font::getCharLineValue(char c, byte line) {
             break;
         case '9':
             res = _getNumeralNine(line);
+            break;
+        case 'A':
+            res = _getLetterA(line);
+            break;
+        case 'X':
+            res = _getLetterX(line);
+            break;
+        case 'Z':
+            res = _getLetterZ(line);
+            break;
+        default:
+            res = _getLetterUnknown(line);
             break;
     }
     return res;
