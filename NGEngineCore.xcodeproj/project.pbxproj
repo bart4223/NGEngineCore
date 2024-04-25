@@ -24,6 +24,10 @@
 		29F15E1F2BD51D4900F1E714 /* NGDefaultFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDefaultFont.h; sourceTree = "<group>"; };
 		29F15E202BD52EC000F1E714 /* NGZX81Font.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGZX81Font.cpp; sourceTree = "<group>"; };
 		29F15E212BD52EC000F1E714 /* NGZX81Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGZX81Font.h; sourceTree = "<group>"; };
+		29F15E2A2BD97A7600F1E714 /* NGZXSpectrumFont.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGZXSpectrumFont.cpp; sourceTree = "<group>"; };
+		29F15E2B2BD97A7600F1E714 /* NGZXSpectrumFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGZXSpectrumFont.h; sourceTree = "<group>"; };
+		29F15E2D2BDA908800F1E714 /* NGCommonGraphics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGCommonGraphics.cpp; sourceTree = "<group>"; };
+		29F15E2E2BDA908800F1E714 /* NGCommonGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCommonGraphics.h; sourceTree = "<group>"; };
 		29FF6A552BD2DB5100EFE28A /* NGCustomFont.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGCustomFont.cpp; sourceTree = "<group>"; };
 		29FF6A562BD2DB5100EFE28A /* NGCustomFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGCustomFont.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,7 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				29D4C60F2AF3AF16000DCE4F /* common */,
-				29FF6A572BD3AA9700EFE28A /* Fonts */,
+				29FF6A572BD3AA9700EFE28A /* fonts */,
+				29F15E2C2BDA907400F1E714 /* graphics */,
 				29D4C61D2AF52CCD000DCE4F /* misc */,
 			);
 			path = src;
@@ -81,7 +86,16 @@
 			name = misc;
 			sourceTree = "<group>";
 		};
-		29FF6A572BD3AA9700EFE28A /* Fonts */ = {
+		29F15E2C2BDA907400F1E714 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				29F15E2E2BDA908800F1E714 /* NGCommonGraphics.h */,
+				29F15E2D2BDA908800F1E714 /* NGCommonGraphics.cpp */,
+			);
+			name = graphics;
+			sourceTree = "<group>";
+		};
+		29FF6A572BD3AA9700EFE28A /* fonts */ = {
 			isa = PBXGroup;
 			children = (
 				29FF6A562BD2DB5100EFE28A /* NGCustomFont.h */,
@@ -90,8 +104,10 @@
 				29F15E1E2BD51D4900F1E714 /* NGDefaultFont.cpp */,
 				29F15E212BD52EC000F1E714 /* NGZX81Font.h */,
 				29F15E202BD52EC000F1E714 /* NGZX81Font.cpp */,
+				29F15E2B2BD97A7600F1E714 /* NGZXSpectrumFont.h */,
+				29F15E2A2BD97A7600F1E714 /* NGZXSpectrumFont.cpp */,
 			);
-			name = Fonts;
+			name = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

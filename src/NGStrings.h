@@ -18,4 +18,6 @@ unsigned char* FloatToChar(float value);
 
 unsigned char* LeftPadInteger(int value, int digits);
 
+int getSize(char * s);
+
 #endif /* NGStrings_h */

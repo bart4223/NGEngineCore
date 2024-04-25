@@ -1,21 +1,21 @@
 //
-//  NGZX81Font.cpp
+//  NGZXSpectrumFont.cpp
 //  NGEngineCore
 //
-//  Created by Nils Grimmer on 21.04.24.
+//  Created by Nils Grimmer on 24.04.24.
 //
 
-#include "NGZX81Font.h"
+#include "NGZXSpectrumFont.h"
 
-NGZX81Font::NGZX81Font() {
+NGZXSpectrumFont::NGZXSpectrumFont() {
     _create();
 }
 
-void NGZX81Font::_create() {
+void NGZXSpectrumFont::_create() {
     
 }
 
-byte NGZX81Font::_getNumeralZero(byte line) {
+byte NGZXSpectrumFont::_getNumeralZero(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -38,7 +38,7 @@ byte NGZX81Font::_getNumeralZero(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralOne(byte line) {
+byte NGZXSpectrumFont::_getNumeralOne(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -59,7 +59,7 @@ byte NGZX81Font::_getNumeralOne(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralTwo(byte line) {
+byte NGZXSpectrumFont::_getNumeralTwo(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -82,7 +82,7 @@ byte NGZX81Font::_getNumeralTwo(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralThree(byte line) {
+byte NGZXSpectrumFont::_getNumeralThree(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -103,7 +103,7 @@ byte NGZX81Font::_getNumeralThree(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralFour(byte line) {
+byte NGZXSpectrumFont::_getNumeralFour(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -126,7 +126,7 @@ byte NGZX81Font::_getNumeralFour(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralFive(byte line) {
+byte NGZXSpectrumFont::_getNumeralFive(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -151,7 +151,7 @@ byte NGZX81Font::_getNumeralFive(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralSix(byte line) {
+byte NGZXSpectrumFont::_getNumeralSix(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -172,7 +172,7 @@ byte NGZX81Font::_getNumeralSix(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralSeven(byte line) {
+byte NGZXSpectrumFont::_getNumeralSeven(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -195,7 +195,7 @@ byte NGZX81Font::_getNumeralSeven(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralEight(byte line) {
+byte NGZXSpectrumFont::_getNumeralEight(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -212,7 +212,7 @@ byte NGZX81Font::_getNumeralEight(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralNine(byte line) {
+byte NGZXSpectrumFont::_getNumeralNine(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -233,7 +233,7 @@ byte NGZX81Font::_getNumeralNine(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getLetterA(byte line) {
+byte NGZXSpectrumFont::_getLetterA(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -252,7 +252,7 @@ byte NGZX81Font::_getLetterA(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getLetterL(byte line) {
+byte NGZXSpectrumFont::_getLetterL(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -269,7 +269,7 @@ byte NGZX81Font::_getLetterL(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getLetterR(byte line) {
+byte NGZXSpectrumFont::_getLetterR(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -288,7 +288,7 @@ byte NGZX81Font::_getLetterR(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getLetterS(byte line) {
+byte NGZXSpectrumFont::_getLetterS(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -309,7 +309,7 @@ byte NGZX81Font::_getLetterS(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getLetterX(byte line) {
+byte NGZXSpectrumFont::_getLetterX(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -328,7 +328,7 @@ byte NGZX81Font::_getLetterX(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getLetterZ(byte line) {
+byte NGZXSpectrumFont::_getLetterZ(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -351,7 +351,38 @@ byte NGZX81Font::_getLetterZ(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getLetterUnknown(byte line) {
+byte NGZXSpectrumFont::_getLetterCopyright(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+            res = 0x3C;
+            break;
+        case 0x01:
+            res = 0x42;
+            break;
+        case 0x02:
+            res = 0x99;
+            break;
+        case 0x03:
+            res = 0xA1;
+            break;
+        case 0x04:
+            res = 0xA1;
+            break;
+        case 0x05:
+            res = 0x99;
+            break;
+        case 0x06:
+            res = 0x42;
+            break;
+        case 0x07:
+            res = 0x3C;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLetterUnknown(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x01:
@@ -376,7 +407,7 @@ byte NGZX81Font::_getLetterUnknown(byte line) {
     return res;
 }
 
-byte NGZX81Font::getCharLineValue(char c, byte line) {
+byte NGZXSpectrumFont::getCharLineValue(char c, byte line) {
     byte res = 0x00;
     switch(c) {
         case '0':
@@ -428,8 +459,15 @@ byte NGZX81Font::getCharLineValue(char c, byte line) {
             res = _getLetterZ(line);
             break;
         default:
-            res = _getLetterUnknown(line);
-            break;
+            byte b = c;
+            switch(b) {
+                case 0xA9:
+                    res = _getLetterCopyright(line);
+                    break;
+                default:
+                    res = _getLetterUnknown(line);
+                    break;
+            }
     }
     return res;
 }

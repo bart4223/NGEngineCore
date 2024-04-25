@@ -1,12 +1,12 @@
 //
-//  NGZX81Font.h
+//  NGZXSpectrumFont.h
 //  NGEngineCore
 //
-//  Created by Nils Grimmer on 21.04.24.
+//  Created by Nils Grimmer on 24.04.24.
 //
 
-#ifndef NGZX81Font_h
-#define NGZX81Font_h
+#ifndef NGZXSpectrumFont_h
+#define NGZXSpectrumFont_h
 
 #if (ARDUINO >= 100)
 #include <Arduino.h>
@@ -16,7 +16,7 @@
 
 #include "NGCustomFont.h"
 
-class NGZX81Font : public NGCustomFont {
+class NGZXSpectrumFont : public NGCustomFont {
     
 protected:
     void _create();
@@ -52,13 +52,15 @@ protected:
     byte _getLetterX(byte line);
     
     byte _getLetterZ(byte line);
+    
+    byte _getLetterCopyright(byte line);
 
     byte _getLetterUnknown(byte line);
 
 public:
-    NGZX81Font();
+    NGZXSpectrumFont();
     
     byte getCharLineValue(char c, byte line);
 };
 
-#endif /* NGZX81Font_h */
+#endif /* NGZXSpectrumFont_h */

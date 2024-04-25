@@ -24,3 +24,12 @@ unsigned char* LeftPadInteger(int value, int digits) {
     s.getBytes(res, s.length() + 1);
     return res;
 }
+
+int getSize(char * s) {
+    char * t;
+    int size = 0;
+    for (t = s; *t != '\0'; t++) {
+        size++;
+    }
+    return size;
+}
