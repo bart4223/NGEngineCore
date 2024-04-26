@@ -605,6 +605,9 @@ byte NGZXSpectrumFont::_getLetterCopyright(byte line) {
 byte NGZXSpectrumFont::_getLetterUnknown(byte line) {
     byte res = 0x00;
     switch(line) {
+        case 0x00:
+            res = 0x00;
+            break;
         case 0x01:
             res = 0x00;
             break;
@@ -621,6 +624,9 @@ byte NGZXSpectrumFont::_getLetterUnknown(byte line) {
             res = 0x00;
             break;
         case 0x06:
+            res = 0x00;
+            break;
+        case 0x07:
             res = 0x00;
             break;
     }

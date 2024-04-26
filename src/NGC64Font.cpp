@@ -1,79 +1,54 @@
 //
-//  NGZX81Font.cpp
+//  NGC64Font.cpp
 //  NGEngineCore
 //
-//  Created by Nils Grimmer on 21.04.24.
+//  Created by Nils Grimmer on 26.04.24.
 //
 
-#include "NGZX81Font.h"
+#include "NGC64Font.h"
 
-NGZX81Font::NGZX81Font() {
+NGC64Font::NGC64Font() {
     _create();
 }
 
-void NGZX81Font::_create() {
+void NGC64Font::_create() {
     
 }
 
-byte NGZX81Font::_getNumeralZero(byte line) {
+byte NGC64Font::_getNumeralZero(byte line) {
     byte res = 0x00;
     switch(line) {
-        case 0x01:
+        case 0x00:
         case 0x06:
             res = 0x3C;
             break;
+        case 0x01:
+        case 0x04:
+        case 0x05:
+            res = 0x66;
+            break;
         case 0x02:
-            res = 0x46;
+            res = 0x6E;
             break;
         case 0x03:
-            res = 0x4A;
-            break;
-        case 0x04:
-            res = 0x52;
-            break;
-        case 0x05:
-            res = 0x62;
+            res = 0x76;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getNumeralOne(byte line) {
+byte NGC64Font::_getNumeralOne(byte line) {
     byte res = 0x00;
     switch(line) {
+        case 0x00:
         case 0x01:
+        case 0x03:
+        case 0x04:
+        case 0x05:
             res = 0x18;
             break;
         case 0x02:
-            res = 0x28;
-            break;
-        case 0x03:
-        case 0x04:
-        case 0x05:
-            res = 0x08;
-            break;
-        case 0x06:
-            res = 0x3E;
-            break;
-    }
-    return res;
-}
-
-byte NGZX81Font::_getNumeralTwo(byte line) {
-    byte res = 0x00;
-    switch(line) {
-        case 0x01:
-        case 0x04:
-            res = 0x3C;
-            break;
-        case 0x02:
-            res = 0x42;
-            break;
-        case 0x03:
-            res = 0x02;
-            break;
-        case 0x05:
-            res = 0x40;
+            res = 0x38;
             break;
         case 0x06:
             res = 0x7E;
@@ -82,295 +57,319 @@ byte NGZX81Font::_getNumeralTwo(byte line) {
     return res;
 }
 
-byte NGZX81Font::_getNumeralThree(byte line) {
+byte NGC64Font::_getNumeralTwo(byte line) {
     byte res = 0x00;
     switch(line) {
-        case 0x01:
-        case 0x06:
+        case 0x00:
             res = 0x3C;
             break;
+       case 0x01:
+            res = 0x66;
+            break;
         case 0x02:
-        case 0x05:
-            res = 0x42;
+            res = 0x06;
             break;
         case 0x03:
             res = 0x0C;
             break;
         case 0x04:
-            res = 0x02;
+            res = 0x30;
+            break;
+        case 0x05:
+            res = 0x60;
+            break;
+        case 0x06:
+            res = 0x7E;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getNumeralFour(byte line) {
+byte NGC64Font::_getNumeralThree(byte line) {
     byte res = 0x00;
     switch(line) {
-        case 0x01:
+        case 0x00:
         case 0x06:
-            res = 0x08;
+            res = 0x3C;
+            break;
+        case 0x01:
+        case 0x05:
+            res = 0x66;
             break;
         case 0x02:
+        case 0x04:
+            res = 0x06;
+            break;
+        case 0x03:
+            res = 0x1C;
+            break;
+    }
+    return res;
+}
+
+byte NGC64Font::_getNumeralFour(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+        case 0x05:
+        case 0x06:
+            res = 0x06;
+            break;
+        case 0x01:
+            res = 0x0E;
+            break;
+        case 0x02:
+            res = 0x1E;
+            break;
+        case 0x03:
+            res = 0x66;
+            break;
+        case 0x04:
+            res = 0x7F;
+            break;
+    }
+    return res;
+}
+
+byte NGC64Font::_getNumeralFive(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+            res = 0x7E;
+            break;
+        case 0x01:
+            res = 0x60;
+            break;
+        case 0x02:
+            res = 0x7C;
+            break;
+        case 0x03:
+        case 0x04:
+            res = 0x06;
+            break;
+        case 0x05:
+            res = 0x66;
+            break;
+        case 0x06:
+            res = 0x3C;
+            break;
+    }
+    return res;
+}
+
+byte NGC64Font::_getNumeralSix(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+        case 0x06:
+            res = 0x3C;
+            break;
+        case 0x01:
+        case 0x04:
+        case 0x05:
+            res = 0x66;
+            break;
+        case 0x02:
+            res = 0x60;
+            break;
+        case 0x03:
+            res = 0x7C;
+            break;
+    }
+    return res;
+}
+
+byte NGC64Font::_getNumeralSeven(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+            res = 0x7E;
+            break;
+        case 0x01:
+            res = 0x66;
+            break;
+        case 0x02:
+            res = 0x0C;
+            break;
+        case 0x03:
+        case 0x04:
+        case 0x05:
+        case 0x06:
             res = 0x18;
             break;
-        case 0x03:
-            res = 0x28;
-            break;
-        case 0x04:
-            res = 0x48;
-            break;
-        case 0x05:
-            res = 0x7E;
-            break;
     }
     return res;
 }
 
-byte NGZX81Font::_getNumeralFive(byte line) {
+byte NGC64Font::_getNumeralEight(byte line) {
     byte res = 0x00;
     switch(line) {
-        case 0x01:
-            res = 0x7E;
-            break;
-        case 0x02:
-            res = 0x40;
-            break;
-        case 0x03:
-            res = 0x7C;
-            break;
-        case 0x04:
-            res = 0x02;
-            break;
-        case 0x05:
-            res = 0x42;
-            break;
-        case 0x06:
-            res = 0x3C;
-            break;
-    }
-    return res;
-}
-
-byte NGZX81Font::_getNumeralSix(byte line) {
-    byte res = 0x00;
-    switch(line) {
-        case 0x01:
-        case 0x06:
-            res = 0x3C;
-            break;
-        case 0x02:
-            res = 0x40;
-            break;
-        case 0x03:
-            res = 0x7C;
-            break;
-        case 0x04:
-        case 0x05:
-            res = 0x42;
-            break;
-    }
-    return res;
-}
-
-byte NGZX81Font::_getNumeralSeven(byte line) {
-    byte res = 0x00;
-    switch(line) {
-        case 0x01:
-            res = 0x7E;
-            break;
-        case 0x02:
-            res = 0x02;
-            break;
-        case 0x03:
-            res = 0x04;
-            break;
-        case 0x04:
-            res = 0x08;
-            break;
-        case 0x05:
-        case 0x06:
-            res = 0x10;
-            break;
-    }
-    return res;
-}
-
-byte NGZX81Font::_getNumeralEight(byte line) {
-    byte res = 0x00;
-    switch(line) {
-        case 0x01:
+        case 0x00:
         case 0x03:
         case 0x06:
             res = 0x3C;
             break;
+        case 0x01:
         case 0x02:
         case 0x04:
         case 0x05:
-            res = 0x42;
+            res = 0x66;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getNumeralNine(byte line) {
+byte NGC64Font::_getNumeralNine(byte line) {
     byte res = 0x00;
     switch(line) {
-        case 0x01:
+        case 0x00:
         case 0x06:
             res = 0x3C;
             break;
+        case 0x01:
         case 0x02:
-        case 0x03:
-            res = 0x42;
+            res = 0x66;
             break;
-        case 0x04:
+        case 0x03:
             res = 0x3E;
             break;
-        case 0x05:
-            res = 0x02;
-            break;
-    }
-    return res;
-}
-
-byte NGZX81Font::_getLetterA(byte line) {
-    byte res = 0x00;
-    switch(line) {
-        case 0x01:
-            res = 0x3C;
-            break;
-        case 0x02:
-        case 0x03:
-        case 0x05:
-        case 0x06:
-            res = 0x42;
-            break;
         case 0x04:
-            res = 0x7E;
+        case 0x05:
+            res = 0x06;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getLetterC(byte line) {
+byte NGC64Font::_getLetterC(byte line) {
     byte res = 0x00;
     switch(line) {
-        case 0x01:
+        case 0x00:
         case 0x06:
             res = 0x3C;
             break;
-        case 0x02:
+        case 0x01:
         case 0x05:
-            res = 0x42;
+             res = 0x66;
             break;
+        case 0x02:
         case 0x03:
         case 0x04:
-            res = 0x40;
+            res = 0x60;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getLetterL(byte line) {
+byte NGC64Font::_getLetterD(byte line) {
     byte res = 0x00;
     switch(line) {
+        case 0x00:
+        case 0x06:
+            res = 0x78;
+            break;
         case 0x01:
+        case 0x05:
+            res = 0x6C;
+            break;
         case 0x02:
         case 0x03:
         case 0x04:
-        case 0x05:
-            res = 0x40;
+            res = 0x66;
             break;
+    }
+    return res;
+}
+
+byte NGC64Font::_getLetterE(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
         case 0x06:
             res = 0x7E;
             break;
-    }
-    return res;
-}
-
-byte NGZX81Font::_getLetterR(byte line) {
-    byte res = 0x00;
-    switch(line) {
         case 0x01:
+        case 0x02:
         case 0x04:
+        case 0x05:
+            res = 0x60;
+            break;
+        case 0x03:
             res = 0x7C;
             break;
-        case 0x02:
-        case 0x03:
-        case 0x06:
-            res = 0x42;
-            break;
+    }
+    return res;
+}
+
+byte NGC64Font::_getLetterM(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+        case 0x04:
         case 0x05:
-            res = 0x44;
+        case 0x06:
+            res = 0x63;
+            break;
+        case 0x01:
+            res = 0x77;
+            break;
+        case 0x02:
+            res = 0x7F;
+            break;
+        case 0x03:
+            res = 0x6B;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getLetterS(byte line) {
+byte NGC64Font::_getLetterO(byte line) {
     byte res = 0x00;
     switch(line) {
-        case 0x01:
-        case 0x03:
+        case 0x00:
         case 0x06:
             res = 0x3C;
             break;
-        case 0x02:
-            res = 0x40;
-            break;
-        case 0x04:
-            res = 0x02;
-            break;
-        case 0x05:
-            res = 0x42;
-            break;
-    }
-    return res;
-}
-
-byte NGZX81Font::_getLetterX(byte line) {
-    byte res = 0x00;
-    switch(line) {
         case 0x01:
-        case 0x06:
-            res = 0x42;
-            break;
         case 0x02:
-        case 0x05:
-            res = 0x24;
-            break;
         case 0x03:
         case 0x04:
-            res = 0x18;
+        case 0x05:
+            res = 0x66;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getLetterZ(byte line) {
+byte NGC64Font::_getLetterR(byte line) {
     byte res = 0x00;
     switch(line) {
+        case 0x00:
+            res = 0x7C;
+            break;
         case 0x01:
-        case 0x06:
-            res = 0x7E;
+            res = 0x66;
             break;
         case 0x02:
-            res = 0x04;
+            res = 0x66;
             break;
         case 0x03:
-            res = 0x08;
+            res = 0x7C;
             break;
         case 0x04:
-            res = 0x10;
+            res = 0x78;
             break;
         case 0x05:
-            res = 0x20;
+            res = 0x6C;
+            break;
+        case 0x06:
+            res = 0x66;
             break;
     }
     return res;
 }
 
-byte NGZX81Font::_getLetterUnknown(byte line) {
+byte NGC64Font::_getLetterUnknown(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x00:
@@ -401,7 +400,7 @@ byte NGZX81Font::_getLetterUnknown(byte line) {
     return res;
 }
 
-byte NGZX81Font::getCharLineValue(char c, byte line) {
+byte NGC64Font::getCharLineValue(char c, byte line) {
     byte res = 0x00;
     switch(c) {
         case '0':
@@ -434,26 +433,23 @@ byte NGZX81Font::getCharLineValue(char c, byte line) {
         case '9':
             res = _getNumeralNine(line);
             break;
-        case 'A':
-            res = _getLetterA(line);
-            break;
         case 'C':
             res = _getLetterC(line);
             break;
-        case 'L':
-            res = _getLetterL(line);
+        case 'D':
+            res = _getLetterD(line);
+            break;
+        case 'E':
+            res = _getLetterE(line);
+            break;
+        case 'M':
+            res = _getLetterM(line);
+            break;
+        case 'O':
+            res = _getLetterO(line);
             break;
         case 'R':
             res = _getLetterR(line);
-            break;
-        case 'S':
-            res = _getLetterS(line);
-            break;
-        case 'X':
-            res = _getLetterX(line);
-            break;
-        case 'Z':
-            res = _getLetterZ(line);
             break;
         default:
             res = _getLetterUnknown(line);
