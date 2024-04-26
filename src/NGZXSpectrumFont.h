@@ -43,6 +43,8 @@ protected:
     
     byte _getLetterA(byte line);
     
+    byte _getLetterC(byte line);
+    
     byte _getLetterL(byte line);
     
     byte _getLetterR(byte line);
@@ -52,6 +54,28 @@ protected:
     byte _getLetterX(byte line);
     
     byte _getLetterZ(byte line);
+    
+    byte _getLowerLetterA(byte line);
+    
+    byte _getLowerLetterC(byte line);
+    
+    byte _getLowerLetterD(byte line);
+    
+    byte _getLowerLetterE(byte line);
+    
+    byte _getLowerLetterH(byte line);
+    
+    byte _getLowerLetterI(byte line);
+    
+    byte _getLowerLetterL(byte line);
+    
+    byte _getLowerLetterN(byte line);
+    
+    byte _getLowerLetterR(byte line);
+    
+    byte _getLowerLetterS(byte line);
+    
+    byte _getLowerLetterT(byte line);
     
     byte _getLetterCopyright(byte line);
 

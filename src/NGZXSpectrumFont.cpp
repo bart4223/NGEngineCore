@@ -252,6 +252,25 @@ byte NGZXSpectrumFont::_getLetterA(byte line) {
     return res;
 }
 
+byte NGZXSpectrumFont::_getLetterC(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x06:
+            res = 0x3C;
+            break;
+        case 0x02:
+        case 0x05:
+            res = 0x42;
+            break;
+        case 0x03:
+        case 0x04:
+            res = 0x40;
+            break;
+    }
+    return res;
+}
+
 byte NGZXSpectrumFont::_getLetterL(byte line) {
     byte res = 0x00;
     switch(line) {
@@ -351,32 +370,233 @@ byte NGZXSpectrumFont::_getLetterZ(byte line) {
     return res;
 }
 
+byte NGZXSpectrumFont::_getLowerLetterA(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x02:
+            res = 0x38;
+            break;
+        case 0x03:
+            res = 0x04;
+            break;
+        case 0x04:
+        case 0x06:
+            res = 0x3C;
+            break;
+        case 0x05:
+            res = 0x44;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterC(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x02:
+        case 0x06:
+            res = 0x38;
+            break;
+        case 0x03:
+        case 0x04:
+        case 0x05:
+            res = 0x40;
+            break;
+
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterD(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+            res = 0x04;
+            break;
+        case 0x02:
+            res = 0x04;
+            break;
+        case 0x03:
+            res = 0x3C;
+            break;
+        case 0x04:
+            res = 0x44;
+            break;
+        case 0x05:
+            res = 0x44;
+            break;
+        case 0x06:
+            res = 0x3C;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterE(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x02:
+            res = 0x38;
+            break;
+        case 0x03:
+            res = 0x44;
+            break;
+        case 0x04:
+            res = 0x78;
+            break;
+        case 0x05:
+            res = 0x40;
+            break;
+        case 0x06:
+            res = 0x3C;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterH(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x02:
+            res = 0x40;
+            break;
+        case 0x03:
+            res = 0x78;
+            break;
+        case 0x04:
+        case 0x05:
+        case 0x06:
+            res = 0x44;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterI(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x04:
+        case 0x05:
+            res = 0x10;
+            break;
+        case 0x03:
+            res = 0x30;
+            break;
+        case 0x06:
+            res = 0x38;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterL(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x02:
+        case 0x03:
+        case 0x04:
+        case 0x05:
+            res = 0x10;
+            break;
+        case 0x06:
+            res = 0x0C;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterN(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x02:
+            res = 0x78;
+            break;
+        case 0x03:
+        case 0x04:
+        case 0x05:
+        case 0x06:
+            res = 0x44;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterR(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x02:
+            res = 0x1C;
+            break;
+        case 0x03:
+        case 0x04:
+        case 0x05:
+        case 0x06:
+            res = 0x20;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterS(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x02:
+        case 0x04:
+            res = 0x38;
+            break;
+        case 0x03:
+            res = 0x40;
+            break;
+        case 0x05:
+            res = 0x04;
+            break;
+        case 0x06:
+            res = 0x78;
+            break;
+    }
+    return res;
+}
+
+byte NGZXSpectrumFont::_getLowerLetterT(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x03:
+        case 0x04:
+        case 0x05:
+            res = 0x10;
+            break;
+        case 0x02:
+            res = 0x38;
+            break;
+        case 0x06:
+            res = 0x0C;
+            break;
+    }
+    return res;
+}
+
 byte NGZXSpectrumFont::_getLetterCopyright(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x00:
+        case 0x07:
             res = 0x3C;
             break;
         case 0x01:
-            res = 0x42;
-            break;
-        case 0x02:
-            res = 0x99;
-            break;
-        case 0x03:
-            res = 0xA1;
-            break;
-        case 0x04:
-            res = 0xA1;
-            break;
-        case 0x05:
-            res = 0x99;
-            break;
         case 0x06:
             res = 0x42;
             break;
-        case 0x07:
-            res = 0x3C;
+        case 0x02:
+        case 0x05:
+            res = 0x99;
+            break;
+        case 0x03:
+        case 0x04:
+            res = 0xA1;
             break;
     }
     return res;
@@ -443,6 +663,9 @@ byte NGZXSpectrumFont::getCharLineValue(char c, byte line) {
         case 'A':
             res = _getLetterA(line);
             break;
+        case 'C':
+            res = _getLetterC(line);
+            break;
         case 'L':
             res = _getLetterL(line);
             break;
@@ -457,6 +680,39 @@ byte NGZXSpectrumFont::getCharLineValue(char c, byte line) {
             break;
         case 'Z':
             res = _getLetterZ(line);
+            break;
+        case 'a':
+            res = _getLowerLetterA(line);
+            break;
+        case 'c':
+            res = _getLowerLetterC(line);
+            break;
+        case 'd':
+            res = _getLowerLetterD(line);
+            break;
+        case 'e':
+            res = _getLowerLetterE(line);
+            break;
+        case 'h':
+            res = _getLowerLetterH(line);
+            break;
+        case 'i':
+            res = _getLowerLetterI(line);
+            break;
+        case 'l':
+            res = _getLowerLetterL(line);
+            break;
+        case 'n':
+            res = _getLowerLetterN(line);
+            break;
+        case 'r':
+            res = _getLowerLetterR(line);
+            break;
+        case 's':
+            res = _getLowerLetterS(line);
+            break;
+        case 't':
+            res = _getLowerLetterT(line);
             break;
         default:
             byte b = c;
