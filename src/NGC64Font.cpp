@@ -345,25 +345,19 @@ byte NGC64Font::_getLetterR(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x00:
+        case 0x03:
             res = 0x7C;
             break;
         case 0x01:
-            res = 0x66;
-            break;
         case 0x02:
+        case 0x06:
             res = 0x66;
-            break;
-        case 0x03:
-            res = 0x7C;
             break;
         case 0x04:
             res = 0x78;
             break;
         case 0x05:
             res = 0x6C;
-            break;
-        case 0x06:
-            res = 0x66;
             break;
     }
     return res;
