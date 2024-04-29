@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		295848A02BDF860300AFEF4C /* NGDimmableColor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGDimmableColor.cpp; sourceTree = "<group>"; };
+		295848A12BDF860300AFEF4C /* NGDimmableColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDimmableColor.h; sourceTree = "<group>"; };
+		295848A42BDFD71400AFEF4C /* dimmablecolor.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = dimmablecolor.ino; sourceTree = "<group>"; };
 		29D4C60A2AF3A698000DCE4F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		29D4C60B2AF3AB7A000DCE4F /* keywords.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
 		29D4C60C2AF3ABAE000DCE4F /* library.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
@@ -35,6 +38,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		295848A22BDFD6CB00AFEF4C /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				295848A32BDFD6E400AFEF4C /* dimmablecolor */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		295848A32BDFD6E400AFEF4C /* dimmablecolor */ = {
+			isa = PBXGroup;
+			children = (
+				295848A42BDFD71400AFEF4C /* dimmablecolor.ino */,
+			);
+			path = dimmablecolor;
+			sourceTree = "<group>";
+		};
 		29D4C6032AF3A564000DCE4F = {
 			isa = PBXGroup;
 			children = (
@@ -43,6 +62,7 @@
 				29D4C60D2AF3AC34000DCE4F /* LICENSE */,
 				29D4C60A2AF3A698000DCE4F /* README.md */,
 				29D4C60B2AF3AB7A000DCE4F /* keywords.txt */,
+				295848A22BDFD6CB00AFEF4C /* examples */,
 				29D4C60E2AF3AED7000DCE4F /* src */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +113,8 @@
 			children = (
 				29F15E2E2BDA908800F1E714 /* NGCommonGraphics.h */,
 				29F15E2D2BDA908800F1E714 /* NGCommonGraphics.cpp */,
+				295848A12BDF860300AFEF4C /* NGDimmableColor.h */,
+				295848A02BDF860300AFEF4C /* NGDimmableColor.cpp */,
 			);
 			name = graphics;
 			sourceTree = "<group>";
