@@ -46,6 +46,12 @@ public:
     bool isMaxDamping();
     
     bool isMinDamping();
+    
+    int getMinDamping();
+    
+    int getMaxDamping();
+    
+    int getDampingRange();
 };
 
 #endif /* NGDimmableColor_h */

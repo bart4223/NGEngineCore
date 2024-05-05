@@ -2,7 +2,7 @@
 #include <NGDimmableColor.h>
 #include <NGColorDotMatrix.h>
 
-#define DELAY 100
+#define DELAY 10
 
 NGColorDotMatrix *cdm = new NGColorDotMatrix();
 NGDimmableColor *dcOne = new NGDimmableColor(COLOR_GREEN);
@@ -31,8 +31,10 @@ void loop() {
 }
 
 void drawPoints() {
-  cdm->drawPoint(0, 0, dcOne->getColorRGB());
-  cdm->drawPoint(0, 1, dcOne->getColorRGB());
-  cdm->drawPoint(1, 1, dcTwo->getColorRGB());
-  cdm->drawPoint(1, 2, dcTwo->getColorRGB());
+  colorRGB c = dcOne->getColorRGB();
+  cdm->drawPoint(0, 0, c);
+  cdm->drawPoint(0, 1, c);
+  c = dcTwo->getColorRGB();
+  cdm->drawPoint(1, 1, c);
+  cdm->drawPoint(1, 2, c);
 }

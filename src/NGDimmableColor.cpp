@@ -119,9 +119,21 @@ void NGDimmableColor::darker() {
 }
 
 bool NGDimmableColor::isMaxDamping() {
-    return _damping <= DEFMAXDAMPING;
+    return _damping <= getMaxDamping();
 }
 
 bool NGDimmableColor::isMinDamping() {
-    return _damping >= DEFMINDAMPING;
+    return _damping >= getMinDamping();
+}
+
+int NGDimmableColor::getMinDamping() {
+    return DEFMINDAMPING;
+}
+
+int NGDimmableColor::getMaxDamping() {
+    return DEFMAXDAMPING;
+}
+
+int NGDimmableColor::getDampingRange() {
+    return abs(getMaxDamping() - getMinDamping());
 }
