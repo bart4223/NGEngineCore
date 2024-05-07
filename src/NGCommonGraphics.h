@@ -54,4 +54,6 @@ typedef struct colorRGBStruct colorRGB;
 
 int convertColorRGBToInt(colorRGB c);
 
+colorRGB getRandomColor();
+
 #endif /* NGCommonGraphics_hpp */
