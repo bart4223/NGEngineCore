@@ -19,11 +19,20 @@ void setGlobalRandomSeedAnalogInput(byte input) {
     _globalRandomSeedAnalogInput = input;
 }
 
-bool getYesOrNo() {
+void _ensureGlobalRandomSeed() {
     if (!_globalRandomSeedInitialized) {
         randomSeed(analogRead(_globalRandomSeedAnalogInput));
         _globalRandomSeedInitialized = true;
     }
+}
+
+void initGlobalRandomSeedWithAnalogInput(byte input) {
+    setGlobalRandomSeedAnalogInput(input);
+    _ensureGlobalRandomSeed();
+}
+
+bool getYesOrNo() {
+    _ensureGlobalRandomSeed();
     return (random(0, 2) == 0);
 }
 

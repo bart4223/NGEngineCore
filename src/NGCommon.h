@@ -42,7 +42,11 @@ static byte _globalRandomSeedAnalogInput = A0;
 
 void _ensureGlobalSerial(int serialRate);
 
+void _ensureGlobalRandomSeed();
+
 void setGlobalRandomSeedAnalogInput(byte input);
+
+void initGlobalRandomSeedWithAnalogInput(byte input);
 
 bool getYesOrNo();
 
