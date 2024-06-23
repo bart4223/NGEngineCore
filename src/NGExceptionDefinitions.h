@@ -16,10 +16,11 @@
 
 #define ExceptionTooMuchUnitCount                       1000
 #define ExceptionTooMuchComponentCount                  1010
-#define ExceptionTooMuchIRFuncCount                     1020
-#define ExceptionTooMuchMotionProfileCount              1030
-#define ExceptionTooMuchMotionProfileComponentCount     1040
-#define ExceptionTooMuchMotionProfileItemCount          1050
+#define ExceptionNoSoundMachine                         1020
+#define ExceptionTooMuchIRFuncCount                     1030
+#define ExceptionTooMuchMotionProfileCount              1040
+#define ExceptionTooMuchMotionProfileComponentCount     1050
+#define ExceptionTooMuchMotionProfileItemCount          1060
 
 #define ExceptionTooMuchJingleCount                     3000
 #define ExceptionTooMuchObjectRecognizerCount           3010
