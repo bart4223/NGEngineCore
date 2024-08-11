@@ -17,6 +17,8 @@
 class NGIEffect {
     
 public:
+    virtual void initialize();
+    
     virtual void processingLoop();
 };
 

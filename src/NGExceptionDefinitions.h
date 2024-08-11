@@ -44,4 +44,6 @@
 #define ExceptionTooMuchLightingScenarioAreaCount       7050
 #define ExceptionTooMuchLightingScenarioAreaLightCount  7060
 
+#define ExceptionTooMuchSplashEffectCount               8000
+
 #endif /* NGExceptionDefinitions_h */

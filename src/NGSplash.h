@@ -16,13 +16,27 @@
 
 #include "NGIEffect.h"
 
+#define DEFMAXEFFECTS 5
+
 class NGSplash {
+    
+private:
+    NGIEffect* _effects[DEFMAXEFFECTS];
+    byte _effectCount = 0;
+    int _exceptionCount = 0;
     
 protected:
     void _create();
+    void _raiseException(int id);
     
 public:
     NGSplash();
+    
+    byte registerEffect(NGIEffect *effect);
+    
+    void initialize();
+    
+    void processingLoop();
 };
 
 #endif /* NGSplash_h */
