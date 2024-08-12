@@ -8,12 +8,12 @@
 #include "NGExceptionDefinitions.h"
 #include "NGSplash.h"
 
-NGSplash::NGSplash() {
-    _create();
+NGSplash::NGSplash(NGINotification *notification) {
+    _create(notification);
 }
 
-void NGSplash::_create() {
-    
+void NGSplash::_create(NGINotification *notification) {
+    _notification = notification;
 }
 
 void NGSplash::_raiseException(int id) {
@@ -45,4 +45,12 @@ void NGSplash::processingLoop() {
     for (int i = 0; i < _effectCount; i++) {
         _effects[i]->processingLoop();
     }
+}
+
+void NGSplash::writeInfo(char* info) {
+    _notification->writeInfo(info);
+}
+
+void NGSplash::clearInfo() {
+    _notification->clear();
 }

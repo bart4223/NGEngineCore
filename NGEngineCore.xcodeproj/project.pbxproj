@@ -10,6 +10,7 @@
 		295848A02BDF860300AFEF4C /* NGDimmableColor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGDimmableColor.cpp; sourceTree = "<group>"; };
 		295848A12BDF860300AFEF4C /* NGDimmableColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDimmableColor.h; sourceTree = "<group>"; };
 		295848A42BDFD71400AFEF4C /* dimmablecolor.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = dimmablecolor.ino; sourceTree = "<group>"; };
+		296219B32C6A69E400F98A90 /* NGINotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGINotification.h; sourceTree = "<group>"; };
 		29D4C60A2AF3A698000DCE4F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		29D4C60B2AF3AB7A000DCE4F /* keywords.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = keywords.txt; sourceTree = "<group>"; };
 		29D4C60C2AF3ABAE000DCE4F /* library.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = library.properties; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 				29D4C6122AF3D85B000DCE4F /* NGCommon.h */,
 				29D4C6132AF3D85B000DCE4F /* NGCommon.cpp */,
 				29D4C6182AF403CD000DCE4F /* NGExceptionDefinitions.h */,
+				296219B32C6A69E400F98A90 /* NGINotification.h */,
 				29D4C6192AF403CD000DCE4F /* NGITestableComponent.h */,
 				29ED57EE2C613286003E3AE4 /* NGSplash.h */,
 				29ED57ED2C613286003E3AE4 /* NGSplash.cpp */,

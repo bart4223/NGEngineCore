@@ -14,6 +14,7 @@
 #include <WProgram.h>
 #endif
 
+#include "NGINotification.h"
 #include "NGIEffect.h"
 
 #define DEFMAXEFFECTS 5
@@ -21,22 +22,27 @@
 class NGSplash {
     
 private:
+    NGINotification *_notification;
     NGIEffect* _effects[DEFMAXEFFECTS];
     byte _effectCount = 0;
     int _exceptionCount = 0;
     
 protected:
-    void _create();
+    void _create(NGINotification *notification);
     void _raiseException(int id);
     
 public:
-    NGSplash();
+    NGSplash(NGINotification *notification);
     
     byte registerEffect(NGIEffect *effect);
     
     void initialize();
     
     void processingLoop();
+    
+    void writeInfo(char* info);
+    
+    void clearInfo();
 };
 
 #endif /* NGSplash_h */
