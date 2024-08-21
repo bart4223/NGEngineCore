@@ -23,7 +23,7 @@ class NGSplash {
     
 private:
     NGINotification *_notification;
-    NGIEffect* _effects[DEFMAXEFFECTS];
+    NGIEffect *_effects[DEFMAXEFFECTS];
     byte _effectCount = 0;
     int _exceptionCount = 0;
     

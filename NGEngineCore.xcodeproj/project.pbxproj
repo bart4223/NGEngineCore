@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		2957562B2C76892C00616955 /* NGSimpleKeypad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGSimpleKeypad.h; sourceTree = "<group>"; };
+		2957562C2C76893C00616955 /* NGSimpleKeypad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGSimpleKeypad.cpp; sourceTree = "<group>"; };
+		2957562E2C7689CC00616955 /* simplekeypad.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = simplekeypad.ino; sourceTree = "<group>"; };
 		295848A02BDF860300AFEF4C /* NGDimmableColor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGDimmableColor.cpp; sourceTree = "<group>"; };
 		295848A12BDF860300AFEF4C /* NGDimmableColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDimmableColor.h; sourceTree = "<group>"; };
 		295848A42BDFD71400AFEF4C /* dimmablecolor.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = dimmablecolor.ino; sourceTree = "<group>"; };
@@ -42,10 +45,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		2957562D2C76895600616955 /* simplekeypad */ = {
+			isa = PBXGroup;
+			children = (
+				2957562E2C7689CC00616955 /* simplekeypad.ino */,
+			);
+			path = simplekeypad;
+			sourceTree = "<group>";
+		};
 		295848A22BDFD6CB00AFEF4C /* examples */ = {
 			isa = PBXGroup;
 			children = (
 				295848A32BDFD6E400AFEF4C /* dimmablecolor */,
+				2957562D2C76895600616955 /* simplekeypad */,
 			);
 			path = examples;
 			sourceTree = "<group>";
@@ -111,6 +123,8 @@
 			children = (
 				29D4C61F2AF52D11000DCE4F /* NG8BitShiftRegister.h */,
 				29D4C61E2AF52D11000DCE4F /* NG8BitShiftRegister.cpp */,
+				2957562B2C76892C00616955 /* NGSimpleKeypad.h */,
+				2957562C2C76893C00616955 /* NGSimpleKeypad.cpp */,
 			);
 			name = misc;
 			sourceTree = "<group>";
