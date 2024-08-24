@@ -15,6 +15,18 @@ void NGSimpleKeypad::_create() {
     
 }
 
+void NGSimpleKeypad::_registerKey(simpleKeyKind kind, byte pin, byte id, int delay, simpleKeyMode mode, byte pinactivation) {
+    simpleKeypadData key;
+    key.kind = kind;
+    key.mode = mode;
+    key.pin = pin;
+    key.pinActivation = pinactivation;
+    key.id = id;
+    key.delay = delay;
+    _keys[_keyCount] = key;
+    _keyCount++;
+}
+
 void NGSimpleKeypad::registerCallback(simpleKeypadCallbackFunc callback) {
     _callback = callback;
 }
@@ -24,17 +36,22 @@ void NGSimpleKeypad::registerKey(byte pin, byte id, int delay) {
 }
 
 void NGSimpleKeypad::registerKey(byte pin, byte id, int delay, simpleKeyMode mode) {
-    simpleKeypadData key;
-    key.mode = mode;
-    key.pin = pin;
-    key.id = id;
-    key.delay = delay;
-    _keys[_keyCount] = key;
-    _keyCount++;
+    _registerKey(skkAlways, pin, id, delay, mode, 0);
+}
+
+void NGSimpleKeypad::registerKey(byte pin, byte pinActivation, byte id, int delay, simpleKeyMode mode) {
+    _registerKey(skkActivation, pin, id, delay, mode, pinActivation);
 }
 
 void NGSimpleKeypad::initialize() {
     for (int i = 0; i < _keyCount; i++) {
+        if (_keys[i].kind == skkActivation) {
+            pinMode(_keys[i].pinActivation, OUTPUT);
+            digitalWrite(_keys[i].pinActivation, LOW);
+            _keys[i].active = false;
+        } else {
+            _keys[i].active = true;
+        }
         switch(_keys[i].mode) {
             case skmLow:
                 pinMode(_keys[i].pin, INPUT_PULLUP);
@@ -64,6 +81,32 @@ void NGSimpleKeypad::processingLoop() {
                 }
                 _keys[i].last = millis();
             }
+        }
+    }
+}
+
+void NGSimpleKeypad::activateKey(byte id) {
+    for (int i = 0; i < _keyCount; i++) {
+        if (_keys[i].kind == skkActivation && _keys[i].id == id) {
+            digitalWrite(_keys[i].pinActivation, HIGH);
+            _keys[i].active = true;
+        }
+    }
+}
+
+void NGSimpleKeypad::deactivateKey(byte id) {
+    for (int i = 0; i < _keyCount; i++) {
+        if (_keys[i].kind == skkActivation && _keys[i].id == id) {
+            digitalWrite(_keys[i].pinActivation, LOW);
+            _keys[i].active = false;
+        }
+    }
+}
+
+bool NGSimpleKeypad::isKeyActive(byte id) {
+    for (int i = 0; i < _keyCount; i++) {
+        if (_keys[i].id == id) {
+            return _keys[i].active;
         }
     }
 }
