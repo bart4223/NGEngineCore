@@ -10,6 +10,7 @@
 		2957562B2C76892C00616955 /* NGSimpleKeypad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGSimpleKeypad.h; sourceTree = "<group>"; };
 		2957562C2C76893C00616955 /* NGSimpleKeypad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGSimpleKeypad.cpp; sourceTree = "<group>"; };
 		2957562E2C7689CC00616955 /* simplekeypad.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = simplekeypad.ino; sourceTree = "<group>"; };
+		2957562F2C7B871D00616955 /* NGIPaintableComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGIPaintableComponent.h; sourceTree = "<group>"; };
 		295848A02BDF860300AFEF4C /* NGDimmableColor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGDimmableColor.cpp; sourceTree = "<group>"; };
 		295848A12BDF860300AFEF4C /* NGDimmableColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDimmableColor.h; sourceTree = "<group>"; };
 		295848A42BDFD71400AFEF4C /* dimmablecolor.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = dimmablecolor.ino; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 				295848A12BDF860300AFEF4C /* NGDimmableColor.h */,
 				295848A02BDF860300AFEF4C /* NGDimmableColor.cpp */,
 				29ED57EC2C613229003E3AE4 /* NGIEffect.h */,
+				2957562F2C7B871D00616955 /* NGIPaintableComponent.h */,
 			);
 			name = graphics;
 			sourceTree = "<group>";
