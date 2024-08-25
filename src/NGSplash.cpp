@@ -66,7 +66,7 @@ void NGSplash::processingLoop() {
         if (_splashEffects[i].start > 0) {
             bool ok = (current - _splashEffects[i].start) > _splashEffects[i].startdelay;
             if (ok && _splashEffects[i].runtime > 0) {
-                ok = (current - _splashEffects[i].start - _splashEffects[i].start) < _splashEffects[i].runtime;
+                ok = (current - _splashEffects[i].start - _splashEffects[i].startdelay) < _splashEffects[i].runtime;
                 if (!ok) {
                     _splashEffects[i].start = 0;
                     #ifdef NG_PLATFORM_MEGA

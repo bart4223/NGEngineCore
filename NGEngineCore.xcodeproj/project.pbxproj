@@ -11,6 +11,8 @@
 		2957562C2C76893C00616955 /* NGSimpleKeypad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGSimpleKeypad.cpp; sourceTree = "<group>"; };
 		2957562E2C7689CC00616955 /* simplekeypad.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = simplekeypad.ino; sourceTree = "<group>"; };
 		2957562F2C7B871D00616955 /* NGIPaintableComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGIPaintableComponent.h; sourceTree = "<group>"; };
+		295756312C7B880500616955 /* NGColorDotMatrixEffectVoid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGColorDotMatrixEffectVoid.cpp; sourceTree = "<group>"; };
+		295756322C7B880500616955 /* NGColorDotMatrixEffectVoid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGColorDotMatrixEffectVoid.h; sourceTree = "<group>"; };
 		295848A02BDF860300AFEF4C /* NGDimmableColor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NGDimmableColor.cpp; sourceTree = "<group>"; };
 		295848A12BDF860300AFEF4C /* NGDimmableColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDimmableColor.h; sourceTree = "<group>"; };
 		295848A42BDFD71400AFEF4C /* dimmablecolor.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = dimmablecolor.ino; sourceTree = "<group>"; };
@@ -54,6 +56,15 @@
 			path = simplekeypad;
 			sourceTree = "<group>";
 		};
+		295756302C7B879C00616955 /* effects */ = {
+			isa = PBXGroup;
+			children = (
+				295756322C7B880500616955 /* NGColorDotMatrixEffectVoid.h */,
+				295756312C7B880500616955 /* NGColorDotMatrixEffectVoid.cpp */,
+			);
+			name = effects;
+			sourceTree = "<group>";
+		};
 		295848A22BDFD6CB00AFEF4C /* examples */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 			children = (
 				29D4C60F2AF3AF16000DCE4F /* common */,
 				29FF6A572BD3AA9700EFE28A /* fonts */,
+				295756302C7B879C00616955 /* effects */,
 				29F15E2C2BDA907400F1E714 /* graphics */,
 				29D4C61D2AF52CCD000DCE4F /* misc */,
 			);
