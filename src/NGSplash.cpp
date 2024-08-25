@@ -5,6 +5,7 @@
 //  Created by Nils Grimmer on 05.08.24.
 //
 
+#include "NGCommon.h"
 #include "NGExceptionDefinitions.h"
 #include "NGSplash.h"
 
