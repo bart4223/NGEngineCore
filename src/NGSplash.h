@@ -17,15 +17,25 @@
 #include "NGINotification.h"
 #include "NGIEffect.h"
 
-#define DEFMAXEFFECTS 5
+#define DEFMAXSPLASHEFFECTS 5
+
+struct splashEffectStruct
+{
+    NGIEffect *effect;
+    int startdelay = 0;
+    int runtime = 0;
+    long start = 0;
+};
+typedef struct splashEffectStruct splashEffect;
 
 class NGSplash {
     
 private:
     NGINotification *_notification;
-    NGIEffect *_effects[DEFMAXEFFECTS];
-    byte _effectCount = 0;
+    splashEffect _splashEffects[DEFMAXSPLASHEFFECTS];
+    byte _splashEffectCount = 0;
     int _exceptionCount = 0;
+    bool _logging = false;
     
 protected:
     void _create(NGINotification *notification);
@@ -36,6 +46,12 @@ public:
     
     byte registerEffect(NGIEffect *effect);
     
+    byte registerEffect(NGIEffect *effect, int startdelay);
+    
+    byte registerEffect(NGIEffect *effect, int startdelay, int runtime);
+    
+    void setLogging(bool logging);
+    
     void initialize();
     
     void processingLoop();
@@ -43,6 +59,8 @@ public:
     void writeInfo(char* info);
     
     void clearInfo();
+    
+    bool isFinished();
 };
 
 #endif /* NGSplash_h */

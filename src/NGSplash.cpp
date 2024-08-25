@@ -25,25 +25,62 @@ void NGSplash::_raiseException(int id) {
 }
 
 byte NGSplash::registerEffect(NGIEffect *effect) {
-    byte res = _effectCount;
-    if (_effectCount < DEFMAXEFFECTS) {
-        _effects[res] = effect;
-        _effectCount++;
+    return registerEffect(effect, 0);
+}
+
+byte NGSplash::registerEffect(NGIEffect *effect, int startdelay) {
+    return registerEffect(effect, startdelay, 0);
+}
+
+byte NGSplash::registerEffect(NGIEffect *effect, int startdelay, int runtime) {
+    byte res = _splashEffectCount;
+    if (_splashEffectCount < DEFMAXSPLASHEFFECTS) {
+        splashEffect se;
+        se.effect = effect;
+        se.startdelay = startdelay;
+        se.runtime = runtime;
+        _splashEffects[res] = se;
+        _splashEffectCount++;
     } else {
         _raiseException(ExceptionTooMuchSplashEffectCount);
     }
     return res;
 }
 
+void NGSplash::setLogging(bool logging) {
+    _logging = logging;
+}
+
 void NGSplash::initialize() {
-    for (int i = 0; i < _effectCount; i++) {
-        _effects[i]->initialize();
+    long start = millis();
+    for (int i = 0; i < _splashEffectCount; i++) {
+        _splashEffects[i].effect->initialize();
+        _splashEffects[i].start = start;
     }
 }
 
 void NGSplash::processingLoop() {
-    for (int i = 0; i < _effectCount; i++) {
-        _effects[i]->processingLoop();
+    long current = millis();
+    for (int i = 0; i < _splashEffectCount; i++) {
+        if (_splashEffects[i].start > 0) {
+            bool ok = (current - _splashEffects[i].start) > _splashEffects[i].startdelay;
+            if (ok && _splashEffects[i].runtime > 0) {
+                ok = (current - _splashEffects[i].start - _splashEffects[i].start) < _splashEffects[i].runtime;
+                if (!ok) {
+                    _splashEffects[i].start = 0;
+                    #ifdef NG_PLATFORM_MEGA
+                    if (_logging) {
+                        char log[100];
+                        sprintf(log, "Splash effect %d finished", i);
+                        writeInfo(log);
+                    }
+                    #endif
+                }
+            }
+            if (ok) {
+                _splashEffects[i].effect->processingLoop();
+            }
+        }
     }
 }
 
@@ -53,4 +90,13 @@ void NGSplash::writeInfo(char* info) {
 
 void NGSplash::clearInfo() {
     _notification->clear();
+}
+
+bool NGSplash::isFinished() {
+    for (int i = 0; i < _splashEffectCount; i++) {
+        if (_splashEffects[i].start > 0) {
+            return false;
+        }
+    }
+    return true;
 }
