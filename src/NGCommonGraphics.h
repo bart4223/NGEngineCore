@@ -29,6 +29,7 @@ struct colorRGBStruct
 };
 typedef struct colorRGBStruct colorRGB;
 
+#define COLOR_TRANSPARENT   { .red = 255, .green = 1, .blue = 255 }
 #define COLOR_BLACK         { .red = 0, .green = 0, .blue = 0 }
 #define COLOR_BLUE          { .red = 0, .green = 0, .blue = 255 }
 #define COLOR_BLUE_LOW      { .red = 0, .green = 0, .blue = 55 }
@@ -55,5 +56,7 @@ typedef struct colorRGBStruct colorRGB;
 int convertColorRGBToInt(colorRGB c);
 
 colorRGB getRandomColor();
+
+bool isSameColor(colorRGB colorOne, colorRGB colorTwo);
 
 #endif /* NGCommonGraphics_hpp */

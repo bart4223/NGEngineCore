@@ -34,3 +34,7 @@ colorRGB getRandomColor() {
     }
     return res;
 }
+
+bool isSameColor(colorRGB colorOne, colorRGB colorTwo) {
+    return colorOne.red == colorTwo.red && colorOne.green == colorTwo.green && colorOne.blue == colorTwo.blue;
+}
