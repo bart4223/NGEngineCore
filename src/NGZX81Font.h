@@ -45,6 +45,10 @@ protected:
     
     byte _getLetterC(byte line);
     
+    byte _getLetterD(byte line);
+    
+    byte _getLetterE(byte line);
+    
     byte _getLetterL(byte line);
     
     byte _getLetterR(byte line);
