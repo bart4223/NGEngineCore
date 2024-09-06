@@ -25,6 +25,10 @@ void NGSplash::_raiseException(int id) {
     writeInfo(info);
 }
 
+void NGSplash::registerPaintableComponent(NGIPaintableComponent  *paintablecomponent) {
+    _paintableComponent = paintablecomponent;
+}
+
 byte NGSplash::registerEffect(NGIEffect *effect) {
     return registerEffect(effect, 0);
 }
@@ -61,6 +65,9 @@ void NGSplash::initialize() {
 }
 
 void NGSplash::processingLoop() {
+    if (_paintableComponent != nullptr) {
+        _paintableComponent->beginUpdate();
+    }
     long current = millis();
     for (int i = 0; i < _splashEffectCount; i++) {
         if (_splashEffects[i].start > 0) {
@@ -83,6 +90,9 @@ void NGSplash::processingLoop() {
             }
         }
     }
+    if (_paintableComponent != nullptr) {
+        _paintableComponent->endUpdate();
+    }
 }
 
 void NGSplash::writeInfo(char* info) {
@@ -100,4 +110,8 @@ bool NGSplash::isFinished() {
         }
     }
     return true;
+}
+
+int NGSplash::getEffectCount() {
+    return _splashEffectCount;
 }

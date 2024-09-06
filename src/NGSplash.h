@@ -15,6 +15,7 @@
 #endif
 
 #include "NGINotification.h"
+#include "NGIPaintableComponent.h"
 #include "NGIEffect.h"
 
 #define DEFMAXSPLASHEFFECTS 5
@@ -36,6 +37,7 @@ private:
     byte _splashEffectCount = 0;
     int _exceptionCount = 0;
     bool _logging = false;
+    NGIPaintableComponent *_paintableComponent = nullptr;
     
 protected:
     void _create(NGINotification *notification);
@@ -43,6 +45,8 @@ protected:
     
 public:
     NGSplash(NGINotification *notification);
+    
+    void registerPaintableComponent(NGIPaintableComponent  *paintablecomponent);
     
     byte registerEffect(NGIEffect *effect);
     
@@ -61,6 +65,8 @@ public:
     void clearInfo();
     
     bool isFinished();
+    
+    int getEffectCount();
 };
 
 #endif /* NGSplash_h */
