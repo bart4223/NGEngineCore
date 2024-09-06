@@ -32,7 +32,7 @@ typedef struct splashEffectStruct splashEffect;
 class NGSplash {
     
 private:
-    NGINotification *_notification;
+    NGINotification *_notification = nullptr;
     splashEffect _splashEffects[DEFMAXSPLASHEFFECTS];
     byte _splashEffectCount = 0;
     int _exceptionCount = 0;
@@ -44,6 +44,8 @@ protected:
     void _raiseException(int id);
     
 public:
+    NGSplash();
+    
     NGSplash(NGINotification *notification);
     
     void registerPaintableComponent(NGIPaintableComponent  *paintablecomponent);

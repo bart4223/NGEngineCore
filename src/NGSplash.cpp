@@ -9,6 +9,10 @@
 #include "NGExceptionDefinitions.h"
 #include "NGSplash.h"
 
+NGSplash::NGSplash() {
+    _create(nullptr);
+}
+
 NGSplash::NGSplash(NGINotification *notification) {
     _create(notification);
 }
@@ -96,11 +100,15 @@ void NGSplash::processingLoop() {
 }
 
 void NGSplash::writeInfo(char* info) {
-    _notification->writeInfo(info);
+    if (_notification != nullptr) {
+        _notification->writeInfo(info);
+    }
 }
 
 void NGSplash::clearInfo() {
-    _notification->clear();
+    if (_notification != nullptr) {
+        _notification->clear();
+    }
 }
 
 bool NGSplash::isFinished() {
