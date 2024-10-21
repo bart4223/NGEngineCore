@@ -32,7 +32,7 @@ void NGSimpleKeypad::registerCallback(simpleKeypadCallbackFunc callback) {
 }
 
 void NGSimpleKeypad::registerKey(byte pin, byte id, int delay) {
-    registerKey(pin, id, delay, simpleKeyMode::skmLow);
+    registerKey(pin, id, delay, skmLow);
 }
 
 void NGSimpleKeypad::registerKey(byte pin, byte id, int delay, simpleKeyMode mode) {
