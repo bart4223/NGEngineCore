@@ -8,14 +8,9 @@
 #ifndef NGPaintableComponentEffectVoid_h
 #define NGPaintableComponentEffectVoid_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
-#include "NGIEffect.h"
-#include "NGIPaintableComponent.h"
+#include <NGIEffect.h>
+#include <NGIPaintableComponent.h>
 
 class NGPaintableComponentEffectVoid: public NGIEffect {
     

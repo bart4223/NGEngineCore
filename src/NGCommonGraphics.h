@@ -8,11 +8,7 @@
 #ifndef NGCommonGraphics_h
 #define NGCommonGraphics_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
 
 struct coord2DStruct
 {

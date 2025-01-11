@@ -8,11 +8,7 @@
 #ifndef NG8BitShiftRegister_h
 #define NG8BitShiftRegister_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
 
 enum shiftRegisterDirection { srdLeft, srdRight };
 

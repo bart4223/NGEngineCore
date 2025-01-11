@@ -8,13 +8,8 @@
 #ifndef NGDimmableColor_h
 #define NGDimmableColor_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
-#include "NGCommonGraphics.h"
+#include <NGCommonGraphics.h>
 
 #define DEFMINDAMPING 0
 #define DEFMAXDAMPING -21
@@ -26,7 +21,7 @@ private:
     int _damping = 0;
 
 protected:
-    _create(colorRGB color);
+    void _create(colorRGB color);
     
     float _getFactor();
     

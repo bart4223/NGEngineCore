@@ -8,13 +8,8 @@
 #ifndef NGCommon_h
 #define NGCommon_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
-#include "NGCustomFont.h"
+#include <NGCustomFont.h>
 
 #ifdef ARDUINO_AVR_UNO
 #define NG_PLATFORM_AVR

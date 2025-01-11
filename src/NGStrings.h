@@ -8,11 +8,7 @@
 #ifndef NGStrings_h
 #define NGStrings_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
 
 unsigned char* FloatToChar(float value);
 

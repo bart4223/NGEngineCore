@@ -8,13 +8,8 @@
 #ifndef NGZXSpectrumFont_h
 #define NGZXSpectrumFont_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
-#include "NGCustomFont.h"
+#include <NGCustomFont.h>
 
 class NGZXSpectrumFont : public NGCustomFont {
     

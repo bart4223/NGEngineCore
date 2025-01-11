@@ -8,13 +8,8 @@
 #ifndef NGDefaultFont_h
 #define NGDefaultFont_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
-#include "NGCustomFont.h"
+#include <NGCustomFont.h>
 
 class NGDefaultFont : public NGCustomFont {
     

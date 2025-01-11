@@ -11,7 +11,7 @@ NGDimmableColor::NGDimmableColor(colorRGB color) {
     _create(color);
 }
 
-NGDimmableColor::_create(colorRGB color) {
+void NGDimmableColor::_create(colorRGB color) {
     _color = color;
 }
 

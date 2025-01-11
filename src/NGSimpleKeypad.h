@@ -8,11 +8,7 @@
 #ifndef NGSimpleKeypad_h
 #define NGSimpleKeypad_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
 
 #define DEFMAXKEYS 5
 

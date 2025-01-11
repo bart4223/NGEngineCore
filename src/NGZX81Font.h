@@ -8,13 +8,8 @@
 #ifndef NGZX81Font_h
 #define NGZX81Font_h
 
-#if (ARDUINO >= 100)
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
-
-#include "NGCustomFont.h"
+#include <NGCustomFont.h>
 
 class NGZX81Font : public NGCustomFont {
     
