@@ -46,4 +46,6 @@
 
 #define ExceptionTooMuchSplashEffectCount               8000
 
+#define ExceptionTooMuchDoorCount                       9000
+
 #endif /* NGExceptionDefinitions_h */
