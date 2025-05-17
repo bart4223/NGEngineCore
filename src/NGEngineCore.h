@@ -9,10 +9,11 @@
 #define NGEngineCore_h
 
 #include <NGMemoryObserver.h>
-#include <Misc/NGSimpleKeypad.h>
+#include <Common/NGStrings.h>
 #include <Fonts/NGDefaultFont.h>
 #include <Fonts/NGC64Font.h>
 #include <Fonts/NGZX81Font.h>
 #include <Fonts/NGZXSpectrumFont.h>
+#include <Misc/NGSimpleKeypad.h>
 
 #endif /* NGEngineCore_h */
