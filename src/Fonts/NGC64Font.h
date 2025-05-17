@@ -9,7 +9,7 @@
 #define NGC64Font_h
 
 #include <Arduino.h>
-#include <NGCustomFont.h>
+#include <Fonts/NGCustomFont.h>
 
 class NGC64Font : public NGCustomFont {
     

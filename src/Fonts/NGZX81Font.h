@@ -1,17 +1,17 @@
 //
-//  NGZXSpectrumFont.h
+//  NGZX81Font.h
 //  NGEngineCore
 //
-//  Created by Nils Grimmer on 24.04.24.
+//  Created by Nils Grimmer on 21.04.24.
 //
 
-#ifndef NGZXSpectrumFont_h
-#define NGZXSpectrumFont_h
+#ifndef NGZX81Font_h
+#define NGZX81Font_h
 
 #include <Arduino.h>
-#include <NGCustomFont.h>
+#include <Fonts/NGCustomFont.h>
 
-class NGZXSpectrumFont : public NGCustomFont {
+class NGZX81Font : public NGCustomFont {
     
 protected:
     void _create();
@@ -40,6 +40,10 @@ protected:
     
     byte _getLetterC(byte line);
     
+    byte _getLetterD(byte line);
+    
+    byte _getLetterE(byte line);
+    
     byte _getLetterL(byte line);
     
     byte _getLetterR(byte line);
@@ -49,37 +53,13 @@ protected:
     byte _getLetterX(byte line);
     
     byte _getLetterZ(byte line);
-    
-    byte _getLowerLetterA(byte line);
-    
-    byte _getLowerLetterC(byte line);
-    
-    byte _getLowerLetterD(byte line);
-    
-    byte _getLowerLetterE(byte line);
-    
-    byte _getLowerLetterH(byte line);
-    
-    byte _getLowerLetterI(byte line);
-    
-    byte _getLowerLetterL(byte line);
-    
-    byte _getLowerLetterN(byte line);
-    
-    byte _getLowerLetterR(byte line);
-    
-    byte _getLowerLetterS(byte line);
-    
-    byte _getLowerLetterT(byte line);
-    
-    byte _getLetterCopyright(byte line);
 
     byte _getLetterUnknown(byte line);
 
 public:
-    NGZXSpectrumFont();
+    NGZX81Font();
     
     byte getCharLineValue(char c, byte line);
 };
 
-#endif /* NGZXSpectrumFont_h */
+#endif /* NGZX81Font_h */

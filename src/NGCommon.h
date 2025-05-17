@@ -9,7 +9,7 @@
 #define NGCommon_h
 
 #include <Arduino.h>
-#include <NGCustomFont.h>
+#include <Fonts/NGCustomFont.h>
 
 #ifdef ARDUINO_AVR_UNO
 #define NG_PLATFORM_AVR

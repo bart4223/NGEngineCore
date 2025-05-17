@@ -9,7 +9,7 @@
 #define NGDefaultFont_h
 
 #include <Arduino.h>
-#include <NGCustomFont.h>
+#include <Fonts/NGCustomFont.h>
 
 class NGDefaultFont : public NGCustomFont {
     

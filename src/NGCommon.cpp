@@ -6,7 +6,7 @@
 //
 
 #include <NGCommon.h>
-#include <NGDefaultFont.h>
+#include <Fonts/NGDefaultFont.h>
 
 void _ensureGlobalSerial(int serialRate) {
     if (!_globalSerialStarted) {
