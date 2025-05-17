@@ -1,16 +1,15 @@
-#define ACTIVATION // ALWAYS, ACTIVATION
+#define ALWAYS // ALWAYS, ACTIVATION
 
-#include <NGMemoryObserver.h>
-#include <NGSimpleKeypad.h>
+#include <NGEngineCore.h>
 
 #define KEY1PINACTIVATION 22
-#define KEY1PIN           23
+#define KEY1PIN            5
 #define KEY1ID            42
 #define KEY2PINACTIVATION 24
-#define KEY2PIN           25
+#define KEY2PIN            6
 #define KEY2ID            43
 #define KEY3PINACTIVATION 26
-#define KEY3PIN           27
+#define KEY3PIN            7
 #define KEY3ID            44
 #define KEY4PINACTIVATION 28
 #define KEY4PIN           29
@@ -22,16 +21,16 @@
 
 NGSimpleKeypad skp = NGSimpleKeypad();
 
-long lastActivationKey1 = 0;
-long lastActivationKey2 = 0;
+long lastActivationKey1 = 0; 
+long lastActivationKey2 = 0; 
 
 void setup() {
   skp.registerCallback(&SimpleKeypadCallback);
   #ifdef ALWAYS
-  //skp.registerKey(KEY1PIN, KEY1ID, DELAY);
-  skp.registerKey(KEY1PIN, KEY1ID, DELAY, skmHigh);
-  //skp.registerKey(KEY2PIN, KEY2ID, DELAY);
-  //skp.registerKey(KEY3PIN, KEY3ID, DELAY);
+  skp.registerKey(KEY1PIN, KEY1ID, DELAY);
+  //skp.registerKey(KEY1PIN, KEY1ID, DELAY, skmHigh);
+  skp.registerKey(KEY2PIN, KEY2ID, DELAY);
+  skp.registerKey(KEY3PIN, KEY3ID, DELAY);
   //skp.registerKey(KEY4PIN, KEY4ID, DELAY);
   #endif
   #ifdef ACTIVATION
