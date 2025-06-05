@@ -8,6 +8,7 @@
 #ifndef NGEngineCore_h
 #define NGEngineCore_h
 
+#include <NGCommon.h>
 #include <NGMemoryObserver.h>
 #include <Common/NGStrings.h>
 #include <Fonts/NGDefaultFont.h>
