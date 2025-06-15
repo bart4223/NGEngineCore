@@ -3,7 +3,6 @@
 //#define RANDOMIZE
 
 #include <NGEngineCore.h>
-#include <Misc/NG8BitShiftRegister.h>
 
 #ifdef NG_PLATFORM_AVR
 #include <NGMemoryObserver.h>
