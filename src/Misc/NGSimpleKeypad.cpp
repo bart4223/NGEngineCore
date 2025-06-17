@@ -27,6 +27,14 @@ void NGSimpleKeypad::_registerKey(simpleKeyKind kind, byte pin, byte id, int del
     _keyCount++;
 }
 
+void NGSimpleKeypad::_fireCallback(byte key) {
+    _keys[key].fire = true;
+    if (_callback != nullptr) {
+        _callback(_keys[key].id);
+    }
+    _keys[key].last = millis();
+}
+
 void NGSimpleKeypad::registerCallback(simpleKeypadCallbackFunc callback) {
     _callback = callback;
 }
@@ -44,6 +52,10 @@ void NGSimpleKeypad::registerKey(byte pin, byte pinActivation, byte id, int dela
 }
 
 void NGSimpleKeypad::initialize() {
+    initialize(0);
+}
+
+void NGSimpleKeypad::initialize(byte id) {
     for (int i = 0; i < _keyCount; i++) {
         if (_keys[i].kind == skkActivation) {
             pinMode(_keys[i].pinActivation, OUTPUT);
@@ -61,10 +73,17 @@ void NGSimpleKeypad::initialize() {
                 break;
         }
     }
+    for (int i = 0; i < _keyCount; i++) {
+        if (_keys[i].id == id && _keys[i].active) {
+            _fireCallback(i);
+            break;
+        }
+    }
 }
 
 void NGSimpleKeypad::processingLoop() {
     for (int i = 0; i < _keyCount; i++) {
+        _keys[i].fire = false;
         if ((millis() - _keys[i].last) >  _keys[i].delay) {
             bool fire = false;
             switch(_keys[i].mode) {
@@ -74,12 +93,9 @@ void NGSimpleKeypad::processingLoop() {
                 case skmHigh:
                     fire = digitalRead(_keys[i].pin) == HIGH;
                     break;
-            }
+            }        
             if (fire) {
-                if (_callback != nullptr) {
-                    _callback(_keys[i].id);
-                }
-                _keys[i].last = millis();
+                _fireCallback(i);
             }
         }
     }

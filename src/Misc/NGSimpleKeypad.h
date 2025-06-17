@@ -27,20 +27,21 @@ struct simpleKeypadDataStruct
     byte id;
     int delay;
     long last;
+    bool fire = false;
 };
 typedef struct simpleKeypadDataStruct simpleKeypadData;
 
 class NGSimpleKeypad {
     
-private:
+protected:
     simpleKeypadData _keys[DEFMAXKEYS];
     int _keyCount = 0;
     simpleKeypadCallbackFunc _callback = nullptr;
     
-protected:
     void _create();
     void _registerKey(simpleKeyKind kind, byte pin, byte id, int delay, simpleKeyMode mode, byte pinactivation);
-    
+    void _fireCallback(byte key);
+
 public:
     NGSimpleKeypad();
     
@@ -53,6 +54,8 @@ public:
     void registerKey(byte pin, byte pinActivation, byte id, int delay, simpleKeyMode mode);
     
     void initialize();
+
+    void initialize(byte id);
     
     void processingLoop();
     

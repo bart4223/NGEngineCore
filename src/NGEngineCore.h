@@ -16,6 +16,7 @@
 #include <Fonts/NGZX81Font.h>
 #include <Fonts/NGZXSpectrumFont.h>
 #include <Misc/NG8BitShiftRegister.h>
+#include <Misc/NGRadioButtons.h>
 #include <Misc/NGSimpleKeypad.h>
 
 #endif /* NGEngineCore_h */
