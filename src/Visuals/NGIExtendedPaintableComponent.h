@@ -17,6 +17,8 @@ public:
 
     virtual void drawCircleSection(int x0, int y0, int radius, int startAngle, int endAngle, colorRGB color);
     
+    virtual void fillCircleSection(int x0, int y0, int startRadius, int endRadius, int startAngle, int endAngle, colorRGB color);
+    
     virtual void setAngleOffset(int angleOffset);
 };
 
