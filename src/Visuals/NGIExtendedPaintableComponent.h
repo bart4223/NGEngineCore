@@ -13,6 +13,8 @@
 class NGIExtendedPaintableComponent {
     
 public:
+    virtual void fillCircle(int x0, int y0, int radius, colorRGB color);
+
     virtual void drawCircleSection(int x0, int y0, int radius, int startAngle, int endAngle, colorRGB color);
     
     virtual void setAngleOffset(int angleOffset);
