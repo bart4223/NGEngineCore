@@ -7,13 +7,13 @@
 #define CLOCKPINONE  5
 #define DATAPINONE   3
 
-#define KEY1PIN            8
+#define KEY1PIN            9
 #define KEY1ID            42
-#define KEY2PIN            9
+#define KEY2PIN           10
 #define KEY2ID            43
-#define KEY3PIN           10
+#define KEY3PIN           11
 #define KEY3ID            44
-#define KEY4PIN           11
+#define KEY4PIN           12
 #define KEY4ID            45
 
 #define DELAY 500
