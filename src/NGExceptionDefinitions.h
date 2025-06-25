@@ -21,6 +21,7 @@
 #define ExceptionTooMuchMotionProfileCount              1040
 #define ExceptionTooMuchMotionProfileComponentCount     1050
 #define ExceptionTooMuchMotionProfileItemCount          1060
+#define ExceptionTooMuchEffectCount                     1070
 
 #define ExceptionTooMuchJingleCount                     3000
 #define ExceptionTooMuchObjectRecognizerCount           3010
