@@ -81,4 +81,5 @@ byte NGWingDingsFont::getCharLineValue(char c, byte line) {
             res = _getLetterUnknown(line);
             break;
     }
+    return res;
 }
