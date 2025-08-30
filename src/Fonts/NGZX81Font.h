@@ -38,6 +38,8 @@ protected:
     
     byte _getLetterA(byte line);
     
+    byte _getLetterB(byte line);
+
     byte _getLetterC(byte line);
     
     byte _getLetterD(byte line);

@@ -252,6 +252,23 @@ byte NGZX81Font::_getLetterA(byte line) {
     return res;
 }
 
+byte NGZX81Font::_getLetterB(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x01:
+        case 0x03:
+        case 0x06:
+            res = 0x7C;
+            break;
+        case 0x02:
+        case 0x04:
+        case 0x05:
+            res = 0x42;
+            break;
+    }
+    return res;
+}
+
 byte NGZX81Font::_getLetterC(byte line) {
     byte res = 0x00;
     switch(line) {
@@ -473,30 +490,43 @@ byte NGZX81Font::getCharLineValue(char c, byte line) {
             res = _getNumeralNine(line);
             break;
         case 'A':
+        case 'a':
             res = _getLetterA(line);
             break;
+        case 'B':
+        case 'b':
+            res = _getLetterB(line);
+            break;
         case 'C':
+        case 'c':
             res = _getLetterC(line);
             break;
         case 'D':
+        case 'd':
             res = _getLetterD(line);
             break;
         case 'E':
+        case 'e':
             res = _getLetterE(line);
             break;
         case 'L':
+        case 'l':
             res = _getLetterL(line);
             break;
         case 'R':
+        case 'r':
             res = _getLetterR(line);
             break;
         case 'S':
+        case 's':
             res = _getLetterS(line);
             break;
         case 'X':
+        case 'x':
             res = _getLetterX(line);
             break;
         case 'Z':
+        case 'z':
             res = _getLetterZ(line);
             break;
         default:
