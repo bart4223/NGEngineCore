@@ -20,6 +20,8 @@ protected:
 
     byte _getSymbolCopyright(byte line);
 
+    byte _getSymbolHouseBig(byte line);
+
     byte _getSymbolSmiley(byte line);
 
     byte _getSymbolSmileySad(byte line);
