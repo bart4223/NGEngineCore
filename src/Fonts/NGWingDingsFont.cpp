@@ -93,7 +93,53 @@ byte NGWingDingsFont::_getSymbolSmileySad(byte line) {
     return res;
 }
 
-byte NGWingDingsFont::_getLetterUnknown(byte line) {
+byte NGWingDingsFont::_getSymbolTreeThick(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+        case 0x07:
+            res = 0x18;
+            break;
+        case 0x01:
+        case 0x02:
+            res = 0x3C;
+            break;
+        case 0x03:
+        case 0x04:
+            res = 0x7E;
+            break;
+        case 0x05:
+        case 0x06:
+            res = 0xFF;
+            break;
+    }
+    return res;
+}
+
+byte NGWingDingsFont::_getSymbolTreeThin(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x00:
+        case 0x06:
+        case 0x07:
+            res = 0x18;
+            break;
+        case 0x01:
+        case 0x02:
+            res = 0x3C;
+            break;
+        case 0x03:
+        case 0x04:
+            res = 0x7E;
+            break;
+        case 0x05:
+            res = 0xFF;
+            break;
+    }
+    return res;
+}
+
+byte NGWingDingsFont::_getSymbolUnknown(byte line) {
     byte res = 0x00;
     switch(line) {
         case 0x00:
@@ -139,8 +185,14 @@ byte NGWingDingsFont::getCharLineValue(char c, byte line) {
         case 's':
             res = _getSymbolSmileySad(line);
             break;    
+        case 'T':
+            res = _getSymbolTreeThick(line);
+            break;    
+        case 't':
+            res = _getSymbolTreeThin(line);
+            break;    
         default:
-            res = _getLetterUnknown(line);
+            res = _getSymbolUnknown(line);
             break;
     }
     return res;

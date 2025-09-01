@@ -24,7 +24,11 @@ protected:
 
     byte _getSymbolSmileySad(byte line);
 
-    byte _getLetterUnknown(byte line);
+    byte _getSymbolTreeThick(byte line);
+
+    byte _getSymbolTreeThin(byte line);
+
+    byte _getSymbolUnknown(byte line);
 
 public:
     NGWingDingsFont();
