@@ -22,6 +22,8 @@ protected:
 
     byte _getSymbolHouseBig(byte line);
 
+    byte _getSymbolHouseTiny(byte line);
+
     byte _getSymbolSmiley(byte line);
 
     byte _getSymbolSmileySad(byte line);

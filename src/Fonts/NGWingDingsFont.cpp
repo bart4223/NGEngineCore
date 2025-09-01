@@ -60,12 +60,35 @@ byte NGWingDingsFont::_getSymbolHouseBig(byte line) {
             res = 0xFF;
             break;
         case 0x04:
-            res = 0x52;
-            break;
         case 0x05:
             res = 0x52;
             break;
         case 0x06:
+            res = 0x72;
+            break;
+    }
+    return res;
+}
+
+byte NGWingDingsFont::_getSymbolHouseTiny(byte line) {
+    byte res = 0x00;
+    switch(line) {
+        case 0x02:
+            res = 0x18;
+            break;
+        case 0x03:
+            res = 0x3C;
+            break;
+        case 0x04:
+            res = 0x7E;
+            break;
+        case 0x05:
+            res = 0xFF;
+            break;
+        case 0x06:
+            res = 0x52;
+            break;
+        case 0x07:
             res = 0x72;
             break;
     }
@@ -211,6 +234,9 @@ byte NGWingDingsFont::getCharLineValue(char c, byte line) {
         case 'H':
             res = _getSymbolHouseBig(line);
             break;
+        case 'h':
+            res = _getSymbolHouseTiny(line);
+            break;    
         case 'S':
             res = _getSymbolSmiley(line);
             break;
