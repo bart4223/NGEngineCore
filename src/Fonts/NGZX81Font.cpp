@@ -336,6 +336,7 @@ byte NGZX81Font::_getLetterG(byte line) {
         case 0x02:
         case 0x05:
             res = 0x42;
+            break;
         case 0x03:
             res = 0x40;
             break;
