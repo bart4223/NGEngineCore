@@ -66,7 +66,11 @@ protected:
     
     byte _getLetterX(byte line);
     
+    byte _getLetterY(byte line);
+    
     byte _getLetterZ(byte line);
+
+    byte _getLetterCopyright(byte line);
 
     byte _getLetterUnknown(byte line);
 
