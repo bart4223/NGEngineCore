@@ -34,6 +34,7 @@ typedef struct colorRGBStruct colorRGB;
 #define COLOR_BROWN         { .red = 139, .green = 69, .blue = 8 }
 #define COLOR_DARKBLUE      { .red = 0, .green = 0, .blue = 0x8B }
 #define COLOR_DARKGRAY      { .red = 0xA9, .green = 0xA9, .blue = 0xA9 }
+#define COLOR_GOLD          { .red = 0xFF, .green = 0xCC, .blue = 0x00 }
 #define COLOR_GRAY          { .red = 0x80, .green = 0x80, .blue = 0x80 }
 #define COLOR_GREEN         { .red = 0, .green = 255, .blue = 0 }
 #define COLOR_GREEN_LOW     { .red = 0, .green = 55, .blue = 0 }
