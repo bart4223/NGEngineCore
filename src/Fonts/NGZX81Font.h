@@ -48,6 +48,12 @@ protected:
     
     byte _getLetterG(byte line);
     
+    byte _getLetterH(byte line);
+    
+    byte _getLetterI(byte line);
+    
+    byte _getLetterK(byte line);
+    
     byte _getLetterL(byte line);
     
     byte _getLetterM(byte line);
